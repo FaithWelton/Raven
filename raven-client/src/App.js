@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import TextDisplayList from './containers/TextDisplayList';
+import AddText from './components/AddText';
+
 class App extends Component {
   render() {
     return (
@@ -9,8 +12,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hi!
+            Text!
           </p>
+          <AddText />
+          <TextDisplayList />
           <a
             className="App-link"
             href="https://reactjs.org"
