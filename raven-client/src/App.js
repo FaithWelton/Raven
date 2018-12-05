@@ -5,14 +5,35 @@ import './App.css';
 import TextDisplayList from './containers/TextDisplayList';
 import AddText from './components/AddText';
 
+import { Card } from 'react-md';
+import { ListItem, MenuButton } from 'react-md';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <MenuButton
+      id="menu-button-2"
+      icon
+      menuItems={[
+        <ListItem key={1} primaryText="Email" />,
+        <ListItem key={2} primaryText="Calendar" />,
+        <ListItem key={2} primaryText="To Do" />,
+        <ListItem key={2} primaryText="Settings" />,
+      ]}
+      listInline
+      centered
+      anchor={{
+        x: MenuButton.HorizontalAnchors.CENTER,
+        y: MenuButton.VerticalAnchors.CENTER,
+      }}
+    >
+      Menu
+    </MenuButton>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Text!
+            Hello!
           </p>
           <AddText />
           <TextDisplayList />
@@ -25,6 +46,13 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        
+        <Card>
+          Raven Personal Assistant
+        </Card>
+
+        
+
       </div>
     );
   }
